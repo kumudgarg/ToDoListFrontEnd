@@ -11,12 +11,17 @@ class ToDoNote extends Component {
     }
 
     handleCheckBoxChange = () => {
-        this.setState({completed : !this.state.completed})
+        this.setState({completed: !this.state.completed})
         this.update()
     }
 
     update = () => {
+        console.log("in note....." + JSON.stringify(this.state))
         this.props.onUpdate(this.state)
+    }
+
+    handleDescriptionChange = event => {
+        this.setState({description : event.target.value})
     }
 
     render() {
@@ -24,8 +29,9 @@ class ToDoNote extends Component {
         return (
             <div>
                 {console.log("in note" + this.onDelete)}
-                <input id={"isComplete"} type={"checkbox"} onChange={this.handleCheckBoxChange}/>
-                <input id={"description"} type={"text"} defaultValue={toDo.description}/>
+                <input id={"isComplete"} type={"checkbox"} defaultChecked={this.state.completed} onChange={this.handleCheckBoxChange}/>
+                <input id={"description"} type={"text"} defaultValue={toDo.description}
+                       onChange={(e)=>this.handleDescriptionChange(e)}/>
                 <button id={"update"} onClick={() => this.update()}>update</button>
                 <button id={"delete"} onClick={() => this.props.onDelete(toDo.id)}>delete</button>
             </div>
