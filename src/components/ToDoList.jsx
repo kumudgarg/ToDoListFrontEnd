@@ -9,17 +9,19 @@ class ToDoList extends Component {
     render() {
         return (
             <div>
-                {console.log("in list"+this.props.onDelete)}
+                {console.log("in list" + this.props.onDelete)}
 
                 {this.props.toDoList.map(toDo =>
                     <li key={toDo.id}>
-                        <ToDoNote toDo={toDo} onDelete={(id)=>this.props.onDelete(id)} />
+                        <ToDoNote toDo={toDo}
+                                  onDelete={(id) => this.props.onDelete(id)}
+                                  onUpdate={(toDo) => this.props.onUpdate(toDo)}
+                        />
                     </li>)}
             </div>
         );
     }
 }
-
 
 
 export default ToDoList;
