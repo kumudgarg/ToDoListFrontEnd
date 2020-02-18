@@ -20,3 +20,5 @@ class AddToDo extends Component {
         this.setState({description: event.target.value})
     }
 }
+
+export default AddToDo;
