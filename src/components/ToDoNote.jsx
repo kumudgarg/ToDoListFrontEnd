@@ -9,7 +9,8 @@ class ToDoNote extends Component {
         let toDo = this.props.toDo;
         return (
             <div>
-                <input type={"text"} defaultValue={toDo.description}/>
+                <input id={"isComplete"} type={"checkbox"} />
+                <input id={"description"} type={"text"} defaultValue={toDo.description}/>
             </div>
         );
     }
