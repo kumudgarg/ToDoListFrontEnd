@@ -14,9 +14,9 @@ class AddToDo extends Component {
 
     render() {
         return <div id={"addToDoPane"}>
-            <input type={"text"} defaultValue={""} name={"enter todo"}
+            <input id={"inputBox"} type={"text"} defaultValue={""}
                    onChange={event => this.onChange(event)}/>
-            <button onClick={description => this.props.onClick(this.state.description)}>ADD</button>
+            <button id={"saveButton"} onClick={description => this.props.onClick(this.state.description)}>ADD</button>
         </div>
     }
 

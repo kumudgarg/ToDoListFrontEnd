@@ -16,7 +16,6 @@ class ToDoNote extends Component {
     }
 
     update = () => {
-        console.log("in note....." + JSON.stringify(this.state))
         this.props.onUpdate(this.state)
     }
 
