@@ -28,7 +28,6 @@ class ToDoNote extends Component {
         let toDo = this.props.toDo;
         return (
             <div>
-                {console.log("in note" + this.onDelete)}
                 <input id={"isComplete"} type={"checkbox"} defaultChecked={this.state.completed} onChange={this.handleCheckBoxChange}/>
                 <input id={"description"} type={"text"} defaultValue={toDo.description}
                        onChange={(e)=>this.handleDescriptionChange(e)}/>
