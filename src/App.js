@@ -26,12 +26,13 @@ class App extends Component {
 
     onClick = (description) => {
 
-            addToDo(description).then(res => {
-                console.log(res)
-            }).catch((err) => {
+        addToDo(description).then(res => {
+            console.log(res)
+            this.getData()
+        }).catch((err) => {
             console.log(err)
+            alert("unable to add todo")
         })
-        this.getData()
     }
 
     onDelete = id => {
@@ -39,17 +40,21 @@ class App extends Component {
             console.log(res)
         }).catch((err) => {
             console.log(err)
+            this.getData()
         }).catch((err) => {
             console.log(err)
+            alert("unable to delete todo")
         })
-        this.getData()
     }
 
     onUpdate = toDo => {
         updateToDo(toDo).then(res => {
             console.log(res)
+            this.getData()
+        }).catch((err) => {
+            console.log(err)
+            alert("unable to update todo")
         })
-        this.getData()
     }
 
     render() {

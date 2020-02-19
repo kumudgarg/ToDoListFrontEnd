@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41da33e9-2af0-40a4-88b5-9a823e489b4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.App.should render a  div and p tag (1)">
+  <component name="RunManager" selected="Jest.todo note component">
     <configuration name="AddToDo.test.jsx (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -82,17 +83,16 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="App.should render a  div and p tag" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="todo note component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/AddToDo.test.jsx" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" />
       <test-names>
-        <test-name value="App" />
-        <test-name value="should render a  div and p tag" />
+        <test-name value="todo note component" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -111,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.todo note component" />
         <item itemvalue="Jest.App.should render a  div and p tag (1)" />
         <item itemvalue="Jest.App" />
         <item itemvalue="Jest.AddToDo.test.jsx (1)" />
         <item itemvalue="Jest.AddToDo.test.jsx" />
-        <item itemvalue="Jest.App.should render a  div and p tag" />
       </list>
     </recent_temporary>
   </component>
@@ -137,25 +137,41 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1358" height="192" key="GridCell.Tab.0.bottom" timestamp="1581683999773">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state x="560" y="176" key="#Notifications" timestamp="1582096213048">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state x="560" y="176" key="#Notifications/0.23.1920.973@0.23.1920.973" timestamp="1582096213048" />
+    <state x="646" y="194" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1582096358700">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state x="646" y="194" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1920.973@0.23.1920.973" timestamp="1582096358700" />
+    <state width="1878" height="262" key="GridCell.Tab.0.bottom" timestamp="1582095549199">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1581683999773" />
-    <state width="1358" height="192" key="GridCell.Tab.0.center" timestamp="1581683999772">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state width="1878" height="262" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582095549199" />
+    <state width="1878" height="262" key="GridCell.Tab.0.center" timestamp="1582095549198">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1581683999772" />
-    <state width="1358" height="192" key="GridCell.Tab.0.left" timestamp="1581683999772">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state width="1878" height="262" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1582095549198" />
+    <state width="1878" height="262" key="GridCell.Tab.0.left" timestamp="1582095549198">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1581683999772" />
-    <state width="1358" height="192" key="GridCell.Tab.0.right" timestamp="1581683999773">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state width="1878" height="262" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1582095549198" />
+    <state width="1878" height="262" key="GridCell.Tab.0.right" timestamp="1582095549199">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1581683999773" />
+    <state width="1878" height="262" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1582095549199" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1581683712730">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1440.814@0.23.1440.814" timestamp="1581683712730" />
+    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1582096372774">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup/0.23.1920.973@0.23.1920.973" timestamp="1582096372774" />
   </component>
 </project>
