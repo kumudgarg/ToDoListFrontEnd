@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41da33e9-2af0-40a4-88b5-9a823e489b4c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToDoNote.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoNote.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,9 +168,9 @@
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1440.814@0.23.1440.814" timestamp="1581683712730" />
-    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1582096372774">
+    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup" timestamp="1582107323181">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup/0.23.1920.973@0.23.1920.973" timestamp="1582096372774" />
+    <state x="625" y="237" width="670" height="676" key="search.everywhere.popup/0.23.1920.973@0.23.1920.973" timestamp="1582107323181" />
   </component>
 </project>

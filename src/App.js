@@ -25,14 +25,18 @@ class App extends Component {
         })
     }
 
-    onClick = (description) => {
-        addToDo(description).then(res => {
-            console.log(res)
-            this.getData()
-        }).catch((err) => {
-            console.log(err)
-            alert("unable to add todo")
-        })
+    onCreate = (description) => {
+        if (!this.toDoExists(description)) {
+            addToDo(description).then(res => {
+                console.log(res)
+                this.getData()
+            }).catch((err) => {
+                console.log(err)
+                alert("unable to add todo")
+            })
+        } else {
+            alert("todo already exists!!")
+        }
     }
 
     onDelete = id => {
@@ -55,15 +59,26 @@ class App extends Component {
         })
     }
 
+    toDoExists = description => {
+        let exists = false
+        this.state.toDoNotes.map(toDo => {
+            if (toDo.description === description) {
+                exists = true;
+                return
+            }
+        })
+        return exists
+    }
+
     render() {
         return (
             <div className="MainBlock">
-                <AddToDo onClick={(description) => this.onClick(description)}/>
+                <AddToDo onClick={(description) => this.onCreate(description)}/>
                 <div className={"MainBlock"}>
-                {this.state.toDoNotes.length !== 0 && <ToDoList toDoList={this.state.toDoNotes}
-                                                                onDelete={(id) => this.onDelete(id)}
-                                                                onUpdate={(toDo) => this.onUpdate(toDo)}/>
-                                                                || <h3>no notes to display!!</h3>}
+                    {this.state.toDoNotes.length !== 0 && <ToDoList toDoList={this.state.toDoNotes}
+                                                                    onDelete={(id) => this.onDelete(id)}
+                                                                    onUpdate={(toDo) => this.onUpdate(toDo)}/>
+                    || <h3>no notes to display!!</h3>}
                 </div>
             </div>
         );
