@@ -28,7 +28,7 @@ class ToDoNote extends Component {
     handleUpdateClick = () => {
         if (this.state.isDescriptionChanged) {
             this.setState({isDescriptionChanged: false})
-            let updatedToDo = this.state
+            let updatedToDo = this.state;
             let toDoDto = {
                 id: updatedToDo.id,
                 completed: updatedToDo.completed,
