@@ -1,5 +1,10 @@
 .MainBlock {
   text-align: center;
+  border: 1px solid grey;
+  margin: 2em;
+  padding: 1em;
+  padding-left: 0em;
+  padding-right: 0em;
 }
 
 
@@ -18,10 +23,15 @@
   }
 }
 
-.AddToDoBox {
+.AddToDoBoxLayout {
   padding: 2em;
   border: 1px solid grey;
   margin: 2em;
+}
+
+.AddToDoCompLayout {
+  font-size: larger;
+  margin-left: 1em;
 }
 
 .NoteLayout {

@@ -59,10 +59,12 @@ class App extends Component {
         return (
             <div className="MainBlock">
                 <AddToDo onClick={(description) => this.onClick(description)}/>
+                <div className={"MainBlock"}>
                 {this.state.toDoNotes.length !== 0 && <ToDoList toDoList={this.state.toDoNotes}
                                                                 onDelete={(id) => this.onDelete(id)}
                                                                 onUpdate={(toDo) => this.onUpdate(toDo)}/>
                                                                 || <h3>no notes to display!!</h3>}
+                </div>
             </div>
         );
     }

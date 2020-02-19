@@ -14,9 +14,11 @@ class AddToDo extends Component {
 
     render() {
         return <div id={"addToDoPane"} className={"AddToDoBox"}>
-            <input id={"inputBox"} type={"text"} defaultValue={""}
+            <input id={"inputBox"} type={"text"} defaultValue={""} className={"AddToDoCompLayout"}
                    onChange={event => this.onChange(event)}/>
-            <button id={"saveButton"} onClick={description => this.props.onClick(this.state.description)}>ADD</button>
+            <button id={"saveButton"} className={"AddToDoCompLayout"}
+                    onClick={description => this.props.onClick(this.state.description)}>ADD
+            </button>
         </div>
     }
 }
