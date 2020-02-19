@@ -6,7 +6,7 @@ import { shallow } from 'enzyme'
 describe('App', () => {
   it('should render a  AddToDo component', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('div').length).toEqual(1);
+    expect(wrapper.find('div').length).toEqual(2);
   });
 
 });

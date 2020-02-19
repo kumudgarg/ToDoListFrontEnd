@@ -16,7 +16,6 @@ export const deleteToDo = id => {
 }
 
 export const updateToDo = (toDo) => {
-    console.log(toDo)
     let dto = {
         completed : toDo.completed,
         description : toDo.description

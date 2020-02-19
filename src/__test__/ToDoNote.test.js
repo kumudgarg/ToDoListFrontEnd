@@ -19,16 +19,23 @@ describe('todo note component', () => {
         expect(wrapper.find('input').length).toBe(2)
     });
 
-    it('should react to clicks on buttons update and delete', () => {
-        const wrapper = shallow(<ToDoNote toDo={todo} onDelete={deletefn} onUpdate={updatefn}/>);
-        wrapper.find('#update').simulate('click');
+    it('should react to click on delete button', () => {
+        const wrapper = mount(<ToDoNote toDo={todo} onDelete={deletefn} onUpdate={updatefn}/>);
         wrapper.find('#delete').simulate('click');
         expect(deletefn.mock.calls.length).toBe(1);
-        expect(updatefn.mock.calls.length).toBe(1);
+    });
+
+    it('should react to click on update button', () => {
+        const wrapper = shallow(<ToDoNote toDo={todo} onDelete={deletefn} onUpdate={updatefn}/>);
+        wrapper.instance().handleUpdateClick()
+        wrapper.setState({isDescriptionChanged : true})
+        wrapper.find('#update').simulate('click');
+        expect(updatefn).toHaveBeenCalledTimes(1)
     });
 
     it('should react to onChange on checkbox value', () => {
         const wrapper = mount(<ToDoNote toDo={todo} onDelete={deletefn} onUpdate={updatefn}/>);
         expect(wrapper.find('#isComplete').prop('onChange')({currentTarget: {checked:true}}))
+        expect(wrapper.find('#isComplete').prop('onChange')({currentTarget: {checked:false}}))
     });
 })

@@ -15,7 +15,7 @@ class ToDoNote extends Component {
         this.setState({
             completed: !this.state.completed,
             isDescriptionChanged: true
-        }, this.update)
+        }, this.handleUpdateClick)
     }
 
     handleDescriptionChange = event => {
@@ -25,10 +25,16 @@ class ToDoNote extends Component {
         })
     }
 
-    update = () => {
+    handleUpdateClick = () => {
         if (this.state.isDescriptionChanged) {
             this.setState({isDescriptionChanged: false})
-            this.props.onUpdate(this.state)
+            let updatedToDo = this.state
+            let toDoDto = {
+                id: updatedToDo.id,
+                completed: updatedToDo.completed,
+                description: updatedToDo.description,
+            }
+            this.props.onUpdate(toDoDto)
         }
     }
 
@@ -40,7 +46,7 @@ class ToDoNote extends Component {
                        defaultChecked={this.state.completed} onChange={this.handleCheckBoxChange}/>
                 <input className={"NoteCompLayout"} id={"description"} type={"text"} defaultValue={toDo.description}
                        onChange={(e) => this.handleDescriptionChange(e)}/>
-                <button className={"NoteCompLayout"} id={"update"} onClick={() => this.update()}>update</button>
+                <button className={"NoteCompLayout"} id={"update"} onClick={() => this.handleUpdateClick()}>update</button>
                 <button className={"NoteCompLayout"} id={"delete"} onClick={() => this.props.onDelete(toDo.id)}>delete
                 </button>
             </React-Fragment>
