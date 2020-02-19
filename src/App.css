@@ -17,3 +17,15 @@
     transform: rotate(360deg);
   }
 }
+
+.AddToDoBox {
+  margin: 2em;
+}
+
+.NoteLayout {
+  margin-top: 2em;
+}
+
+.NoteCompLayout {
+  margin-left: 1em;
+}

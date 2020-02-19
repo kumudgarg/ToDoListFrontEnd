@@ -59,9 +59,10 @@ class App extends Component {
         return (
             <div className="MainBlock">
                 <AddToDo onClick={(description) => this.onClick(description)}/>
-                {this.state.toDoNotes.length!==0 && <ToDoList toDoList={this.state.toDoNotes}
-                                                   onDelete={(id) => this.onDelete(id)}
-                                                   onUpdate={(toDo) => this.onUpdate(toDo)}/> || <h3>no notes to display!!</h3>}
+                {this.state.toDoNotes.length !== 0 && <ToDoList toDoList={this.state.toDoNotes}
+                                                                onDelete={(id) => this.onDelete(id)}
+                                                                onUpdate={(toDo) => this.onUpdate(toDo)}/>
+                                                                || <h3>no notes to display!!</h3>}
             </div>
         );
     }
