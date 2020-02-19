@@ -8,18 +8,17 @@ class ToDoList extends Component {
 
     render() {
         return (
-            <div>
+            <div align={"center"}>
                 {this.props.toDoList.map(toDo =>
                     <li key={toDo.id}>
                         <ToDoNote toDo={toDo}
                                   onDelete={(id) => this.props.onDelete(id)}
                                   onUpdate={(toDo) => this.props.onUpdate(toDo)}
                         />
-                    </li>)}
-            </div>
-        );
+                    </li>
+                )}
+                </div>
+         )
     }
 }
-
-
 export default ToDoList;

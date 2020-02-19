@@ -26,13 +26,13 @@ class ToDoNote extends Component {
     render() {
         let toDo = this.props.toDo;
         return (
-            <div>
+            <React-Fragment>
                 <input id={"isComplete"} type={"checkbox"} defaultChecked={this.state.completed} onChange={this.handleCheckBoxChange}/>
                 <input id={"description"} type={"text"} defaultValue={toDo.description}
                        onChange={(e)=>this.handleDescriptionChange(e)}/>
                 <button id={"update"} onClick={() => this.update()}>update</button>
                 <button id={"delete"} onClick={() => this.props.onDelete(toDo.id)}>delete</button>
-            </div>
+            </React-Fragment>
         );
     }
 }
