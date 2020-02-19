@@ -19,6 +19,8 @@
 }
 
 .AddToDoBox {
+  padding: 2em;
+  border: 1px solid grey;
   margin: 2em;
 }
 
@@ -27,5 +29,6 @@
 }
 
 .NoteCompLayout {
+  font-size: medium;
   margin-left: 1em;
 }
