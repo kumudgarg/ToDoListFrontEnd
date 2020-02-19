@@ -21,11 +21,11 @@ class App extends Component {
             this.setState({toDoNotes: value.data})
         }).catch((err) => {
             console.log(err)
+            this.setState({toDoNotes: []})
         })
     }
 
     onClick = (description) => {
-
         addToDo(description).then(res => {
             console.log(res)
             this.getData()
@@ -38,8 +38,6 @@ class App extends Component {
     onDelete = id => {
         deleteToDo(id).then(res => {
             console.log(res)
-        }).catch((err) => {
-            console.log(err)
             this.getData()
         }).catch((err) => {
             console.log(err)
@@ -61,9 +59,9 @@ class App extends Component {
         return (
             <div className="MainBlock">
                 <AddToDo onClick={(description) => this.onClick(description)}/>
-                {this.state.toDoNotes && <ToDoList toDoList={this.state.toDoNotes}
+                {this.state.toDoNotes.length!==0 && <ToDoList toDoList={this.state.toDoNotes}
                                                    onDelete={(id) => this.onDelete(id)}
-                                                   onUpdate={(toDo) => this.onUpdate(toDo)}/>}
+                                                   onUpdate={(toDo) => this.onUpdate(toDo)}/> || <h3>no notes to display!!</h3>}
             </div>
         );
     }

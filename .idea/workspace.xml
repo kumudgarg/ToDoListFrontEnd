@@ -35,7 +35,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.todo note component">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="AddToDo.test.jsx (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -145,26 +145,26 @@
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state x="646" y="194" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1920.973@0.23.1920.973" timestamp="1582096358700" />
-    <state width="1878" height="262" key="GridCell.Tab.0.bottom" timestamp="1582095549199">
+    <state width="1878" height="262" key="GridCell.Tab.0.bottom" timestamp="1582098622707">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1581683999773" />
-    <state width="1878" height="262" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582095549199" />
-    <state width="1878" height="262" key="GridCell.Tab.0.center" timestamp="1582095549198">
+    <state width="1878" height="262" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582098622707" />
+    <state width="1878" height="262" key="GridCell.Tab.0.center" timestamp="1582098622706">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1581683999772" />
-    <state width="1878" height="262" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1582095549198" />
-    <state width="1878" height="262" key="GridCell.Tab.0.left" timestamp="1582095549198">
+    <state width="1878" height="262" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1582098622706" />
+    <state width="1878" height="262" key="GridCell.Tab.0.left" timestamp="1582098622705">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1581683999772" />
-    <state width="1878" height="262" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1582095549198" />
-    <state width="1878" height="262" key="GridCell.Tab.0.right" timestamp="1582095549199">
+    <state width="1878" height="262" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1582098622705" />
+    <state width="1878" height="262" key="GridCell.Tab.0.right" timestamp="1582098622706">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1358" height="192" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1581683999773" />
-    <state width="1878" height="262" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1582095549199" />
+    <state width="1878" height="262" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1582098622706" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1581683712730">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
