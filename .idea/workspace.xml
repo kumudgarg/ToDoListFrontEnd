@@ -4,8 +4,6 @@
     <list default="true" id="41da33e9-2af0-40a4-88b5-9a823e489b4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/ToDoService.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/ToDoService.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddToDo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddToDo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToDoNote.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoNote.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +50,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="todo note component.should not react to click on update button if the state has not been changed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="todo note component.should call handleCheckboxChange when checkbox is checked or unchecked and manipulate the state.completed " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -62,11 +60,11 @@
       <test-file value="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" />
       <test-names>
         <test-name value="todo note component" />
-        <test-name value="should not react to click on update button if the state has not been changed" />
+        <test-name value="should call handleCheckboxChange when checkbox is checked or unchecked and manipulate the state.completed " />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="todo note component.should react to click on delete button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="todo note component.should call handleCheckboxChange when checkbox is toggled resulting in a call for handleClickUpdate" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -76,11 +74,11 @@
       <test-file value="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" />
       <test-names>
         <test-name value="todo note component" />
-        <test-name value="should react to click on delete button" />
+        <test-name value="should call handleCheckboxChange when checkbox is toggled resulting in a call for handleClickUpdate" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="todo note component.should react to click on update button with correct parameter if the state has been changed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="todo note component.should update state.description &amp; toggle state.isDescriptionChanged when something is typed in input box" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -90,11 +88,11 @@
       <test-file value="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" />
       <test-names>
         <test-name value="todo note component" />
-        <test-name value="should react to click on update button with correct parameter if the state has been changed" />
+        <test-name value="should update state.description &amp; toggle state.isDescriptionChanged when something is typed in input box" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="todo note component.should react to click on update button" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="todo note component.should update state.description when something is typed in input box" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -104,7 +102,7 @@
       <test-file value="$PROJECT_DIR$/src/__test__/ToDoNote.test.js" />
       <test-names>
         <test-name value="todo note component" />
-        <test-name value="should react to click on update button" />
+        <test-name value="should update state.description when something is typed in input box" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -124,10 +122,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Jest.todo note component" />
-        <item itemvalue="Jest.todo note component.should react to click on delete button" />
-        <item itemvalue="Jest.todo note component.should react to click on update button" />
-        <item itemvalue="Jest.todo note component.should not react to click on update button if the state has not been changed" />
-        <item itemvalue="Jest.todo note component.should react to click on update button with correct parameter if the state has been changed" />
+        <item itemvalue="Jest.todo note component.should update state.description &amp; toggle state.isDescriptionChanged when something is typed in input box" />
+        <item itemvalue="Jest.todo note component.should update state.description when something is typed in input box" />
+        <item itemvalue="Jest.todo note component.should call handleCheckboxChange when checkbox is toggled resulting in a call for handleClickUpdate" />
+        <item itemvalue="Jest.todo note component.should call handleCheckboxChange when checkbox is checked or unchecked and manipulate the state.completed " />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581675281408</updated>
       <workItem from="1581675291709" duration="6383000" />
-      <workItem from="1582181514129" duration="3166000" />
+      <workItem from="1582181514129" duration="7838000" />
     </task>
     <servers />
   </component>
@@ -158,82 +156,82 @@
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state x="646" y="194" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1920.973@0.23.1920.973" timestamp="1582096358700" />
-    <state width="1398" height="202" key="GridCell.Tab.0.bottom" timestamp="1582184859168">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state width="1878" height="261" key="GridCell.Tab.0.bottom" timestamp="1582191787448">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1582181873815" />
     <state width="1398" height="202" key="GridCell.Tab.0.bottom/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1582184859168" />
     <state width="1358" height="192" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1581683999773" />
-    <state width="1878" height="262" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582118046256" />
-    <state width="1398" height="202" key="GridCell.Tab.0.center" timestamp="1582184859167">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state width="1878" height="261" key="GridCell.Tab.0.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582191787448" />
+    <state width="1878" height="261" key="GridCell.Tab.0.center" timestamp="1582191787447">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1582181873814" />
     <state width="1398" height="202" key="GridCell.Tab.0.center/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1582184859167" />
     <state width="1358" height="192" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1581683999772" />
-    <state width="1878" height="262" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1582118046256" />
-    <state width="1398" height="202" key="GridCell.Tab.0.left" timestamp="1582184859166">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state width="1878" height="261" key="GridCell.Tab.0.center/0.23.1920.973@0.23.1920.973" timestamp="1582191787447" />
+    <state width="1878" height="261" key="GridCell.Tab.0.left" timestamp="1582191787447">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1582181873814" />
     <state width="1398" height="202" key="GridCell.Tab.0.left/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1582184859166" />
     <state width="1358" height="192" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1581683999772" />
-    <state width="1878" height="262" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1582118046255" />
-    <state width="1398" height="202" key="GridCell.Tab.0.right" timestamp="1582184859168">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state width="1878" height="261" key="GridCell.Tab.0.left/0.23.1920.973@0.23.1920.973" timestamp="1582191787447" />
+    <state width="1878" height="261" key="GridCell.Tab.0.right" timestamp="1582191787448">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1582181873815" />
     <state width="1398" height="202" key="GridCell.Tab.0.right/0.23.1440.801/1440.23.1920.1057@0.23.1440.801" timestamp="1582184859168" />
     <state width="1358" height="192" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1581683999773" />
-    <state width="1878" height="262" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1582118046256" />
-    <state width="1398" height="252" key="GridCell.Tab.1.bottom" timestamp="1582118044098">
+    <state width="1878" height="261" key="GridCell.Tab.0.right/0.23.1920.973@0.23.1920.973" timestamp="1582191787448" />
+    <state width="1878" height="324" key="GridCell.Tab.1.bottom" timestamp="1582185284091">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.1.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.1.center" timestamp="1582118044098">
+    <state width="1878" height="324" key="GridCell.Tab.1.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582185284091" />
+    <state width="1878" height="324" key="GridCell.Tab.1.center" timestamp="1582185284090">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.1.center/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.1.left" timestamp="1582118044097">
+    <state width="1878" height="324" key="GridCell.Tab.1.center/0.23.1920.973@0.23.1920.973" timestamp="1582185284090" />
+    <state width="1878" height="324" key="GridCell.Tab.1.left" timestamp="1582185284090">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.1.left/0.23.1920.973@0.23.1920.973" timestamp="1582118044097" />
-    <state width="1398" height="252" key="GridCell.Tab.1.right" timestamp="1582118044098">
+    <state width="1878" height="324" key="GridCell.Tab.1.left/0.23.1920.973@0.23.1920.973" timestamp="1582185284090" />
+    <state width="1878" height="324" key="GridCell.Tab.1.right" timestamp="1582185284091">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.1.right/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.2.bottom" timestamp="1582118044098">
+    <state width="1878" height="324" key="GridCell.Tab.1.right/0.23.1920.973@0.23.1920.973" timestamp="1582185284091" />
+    <state width="1878" height="324" key="GridCell.Tab.2.bottom" timestamp="1582185284093">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.2.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.2.center" timestamp="1582118044098">
+    <state width="1878" height="324" key="GridCell.Tab.2.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582185284093" />
+    <state width="1878" height="324" key="GridCell.Tab.2.center" timestamp="1582185284092">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.2.center/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.2.left" timestamp="1582118044098">
+    <state width="1878" height="324" key="GridCell.Tab.2.center/0.23.1920.973@0.23.1920.973" timestamp="1582185284092" />
+    <state width="1878" height="324" key="GridCell.Tab.2.left" timestamp="1582185284091">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.2.left/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.2.right" timestamp="1582118044098">
+    <state width="1878" height="324" key="GridCell.Tab.2.left/0.23.1920.973@0.23.1920.973" timestamp="1582185284091" />
+    <state width="1878" height="324" key="GridCell.Tab.2.right" timestamp="1582185284092">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.2.right/0.23.1920.973@0.23.1920.973" timestamp="1582118044098" />
-    <state width="1398" height="252" key="GridCell.Tab.3.bottom" timestamp="1582118044099">
+    <state width="1878" height="324" key="GridCell.Tab.2.right/0.23.1920.973@0.23.1920.973" timestamp="1582185284092" />
+    <state width="1878" height="324" key="GridCell.Tab.3.bottom" timestamp="1582185284094">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.3.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582118044099" />
-    <state width="1398" height="252" key="GridCell.Tab.3.center" timestamp="1582118044099">
+    <state width="1878" height="324" key="GridCell.Tab.3.bottom/0.23.1920.973@0.23.1920.973" timestamp="1582185284094" />
+    <state width="1878" height="324" key="GridCell.Tab.3.center" timestamp="1582185284093">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.3.center/0.23.1920.973@0.23.1920.973" timestamp="1582118044099" />
-    <state width="1398" height="252" key="GridCell.Tab.3.left" timestamp="1582118044099">
+    <state width="1878" height="324" key="GridCell.Tab.3.center/0.23.1920.973@0.23.1920.973" timestamp="1582185284093" />
+    <state width="1878" height="324" key="GridCell.Tab.3.left" timestamp="1582185284093">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.3.left/0.23.1920.973@0.23.1920.973" timestamp="1582118044099" />
-    <state width="1398" height="252" key="GridCell.Tab.3.right" timestamp="1582118044099">
+    <state width="1878" height="324" key="GridCell.Tab.3.left/0.23.1920.973@0.23.1920.973" timestamp="1582185284093" />
+    <state width="1878" height="324" key="GridCell.Tab.3.right" timestamp="1582185284094">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
-    <state width="1398" height="252" key="GridCell.Tab.3.right/0.23.1920.973@0.23.1920.973" timestamp="1582118044099" />
+    <state width="1878" height="324" key="GridCell.Tab.3.right/0.23.1920.973@0.23.1920.973" timestamp="1582185284094" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1582113338222">
       <screen x="0" y="23" width="1920" height="973" />
     </state>

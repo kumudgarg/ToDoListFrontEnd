@@ -1,5 +1,5 @@
 import React from "react";
-import {mount, shallow} from "enzyme";
+import {shallow} from "enzyme";
 import ToDoNote from "../components/ToDoNote";
 
 describe('todo note component', () => {
@@ -24,7 +24,7 @@ describe('todo note component', () => {
 
     it('should react to click on delete button', () => {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
-        wrapper.setState({id:1})
+        wrapper.setState({id: 1})
         wrapper.find('#delete').simulate('click');
         expect(mockedDeleteFn.mock.calls.length).toBe(1);
         expect(mockedDeleteFn).toHaveBeenCalledWith(1)
@@ -68,6 +68,18 @@ describe('todo note component', () => {
         expect(wrapper.state().completed).toBeTruthy()
         expect(instance.handleUpdateClick).toHaveBeenCalled()
         expect(wrapper.state().isDescriptionChanged).toBeFalsy()
-
     });
+
+    it('should update state.description & toggle state.isDescriptionChanged when something is typed in input box', function () {
+        const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
+        const instance = wrapper.instance()
+        jest.spyOn(instance,'handleDescriptionChange')
+        expect(wrapper.find('#description').prop('value')).toBe(mockedTodo.description);
+        wrapper.find('#description').simulate('change', {target: {name: 'description', value: "changed"}});
+        expect(instance.handleDescriptionChange).toHaveBeenCalled()
+        expect(wrapper.state().description).toBe("changed")
+        expect(wrapper.state().isDescriptionChanged).toBeTruthy()
+    });
+
+
 })
