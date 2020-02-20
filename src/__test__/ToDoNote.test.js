@@ -80,5 +80,4 @@ describe('todo note component', () => {
         expect(wrapper.state().description).toBe("changed")
         expect(wrapper.state().isDescriptionChanged).toBeTruthy()
     });
-
 })
