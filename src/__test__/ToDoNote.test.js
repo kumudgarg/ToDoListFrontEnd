@@ -25,7 +25,7 @@ describe('todo note component', () => {
     it('should react to click on delete button', () => {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         wrapper.setState({id: 1})
-        wrapper.find('#delete').simulate('click');
+        wrapper.find('#deleteBtn').simulate('click');
         expect(mockedDeleteFn.mock.calls.length).toBe(1);
         expect(mockedDeleteFn).toHaveBeenCalledWith(1)
     });
@@ -38,7 +38,7 @@ describe('todo note component', () => {
             description: mockedTodo.description,
             isDescriptionChanged: true
         })
-        wrapper.find('#update').simulate('click');
+        wrapper.find('#updateBtn').simulate('click');
         expect(mockedUpdateFn).toHaveBeenCalledTimes(1)
         expect(mockedUpdateFn).toHaveBeenCalledWith(mockedTodo)
     });
@@ -46,7 +46,7 @@ describe('todo note component', () => {
     it('should not react to click on update button if the state has not been changed', () => {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         wrapper.setState({isDescriptionChanged: false})
-        wrapper.find('#update').simulate('click');
+        wrapper.find('#updateBtn').simulate('click');
         expect(mockedUpdateFn).not.toHaveBeenCalled()
     });
 
@@ -54,7 +54,7 @@ describe('todo note component', () => {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         expect(wrapper.state().completed).toBeFalsy()
         expect(wrapper.state().isDescriptionChanged).toBeFalsy()
-        wrapper.find('#isComplete').simulate('change')
+        wrapper.find('#isCompleteBtn').simulate('change')
         expect(wrapper.state().completed).toBeTruthy()
     });
 
@@ -64,7 +64,7 @@ describe('todo note component', () => {
         jest.spyOn(instance, 'handleUpdateClick')
         expect(wrapper.state().completed).toBeFalsy()
         expect(wrapper.state().isDescriptionChanged).toBeFalsy()
-        wrapper.find('#isComplete').simulate('change')
+        wrapper.find('#isCompleteBtn').simulate('change')
         expect(wrapper.state().completed).toBeTruthy()
         expect(instance.handleUpdateClick).toHaveBeenCalled()
         expect(wrapper.state().isDescriptionChanged).toBeFalsy()
@@ -74,12 +74,11 @@ describe('todo note component', () => {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         const instance = wrapper.instance()
         jest.spyOn(instance,'handleDescriptionChange')
-        expect(wrapper.find('#description').prop('value')).toBe(mockedTodo.description);
-        wrapper.find('#description').simulate('change', {target: {name: 'description', value: "changed"}});
+        expect(wrapper.find('#descriptionBox').prop('defaultValue')).toBe(mockedTodo.description);
+        wrapper.find('#descriptionBox').simulate('change', {target: {name: 'description', value: "changed"}});
         expect(instance.handleDescriptionChange).toHaveBeenCalled()
         expect(wrapper.state().description).toBe("changed")
         expect(wrapper.state().isDescriptionChanged).toBeTruthy()
     });
-
 
 })

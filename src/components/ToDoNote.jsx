@@ -42,12 +42,12 @@ class ToDoNote extends Component {
         let toDo = this.props.toDo;
         return (
             <React-Fragment>
-                <input className={"NoteLayout"} id={"isComplete"} type={"checkbox"}
+                <input className={"NoteLayout"} id={"isCompleteBtn"} type={"checkbox"}
                        defaultChecked={this.state.completed} onChange={this.handleCheckBoxChange}/>
-                <input className={"NoteCompLayout"} id={"description"} type={"text"} value={toDo.description}
+                <input className={"NoteCompLayout"} id={"descriptionBox"} type={"text"} defaultValue={toDo.description}
                        onChange={(e) => this.handleDescriptionChange(e)}/>
-                <button className={"NoteCompLayout"} id={"update"} onClick={this.handleUpdateClick}>update</button>
-                <button className={"NoteCompLayout"} id={"delete"} onClick={() => this.props.onDelete(toDo.id)}>delete
+                <button className={"NoteCompLayout"} id={"updateBtn"} onClick={this.handleUpdateClick}>update</button>
+                <button className={"NoteCompLayout"} id={"deleteBtn"} onClick={() => this.props.onDelete(toDo.id)}>delete
                 </button>
             </React-Fragment>
         );
