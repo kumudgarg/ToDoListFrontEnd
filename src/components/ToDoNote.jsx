@@ -46,7 +46,7 @@ class ToDoNote extends Component {
                        defaultChecked={this.state.completed} onChange={this.handleCheckBoxChange}/>
                 <input className={"NoteCompLayout"} id={"description"} type={"text"} defaultValue={toDo.description}
                        onChange={(e) => this.handleDescriptionChange(e)}/>
-                <button className={"NoteCompLayout"} id={"update"} onClick={() => this.handleUpdateClick()}>update</button>
+                <button className={"NoteCompLayout"} id={"update"} onClick={this.handleUpdateClick}>update</button>
                 <button className={"NoteCompLayout"} id={"delete"} onClick={() => this.props.onDelete(toDo.id)}>delete
                 </button>
             </React-Fragment>

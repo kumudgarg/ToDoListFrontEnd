@@ -12,12 +12,20 @@ class AddToDo extends Component {
         this.setState({description: event.target.value})
     }
 
+    handleCreateToDoSubmit = () => {
+        if(this.state.description.length > 0) {
+            this.props.onClick(this.state.description)
+        } else {
+            console.log("cannot add empty todo")
+        }
+    }
+
     render() {
         return <div id={"addToDoPane"} className={"AddToDoBox"}>
             <input id={"inputBox"} type={"text"} defaultValue={""} className={"AddToDoCompLayout"}
                    onChange={event => this.onChange(event)}/>
             <button id={"saveButton"} className={"AddToDoCompLayout"}
-                    onClick={description => this.props.onClick(this.state.description)}>ADD
+                    onClick={this.handleCreateToDoSubmit}>ADD
             </button>
         </div>
     }
