@@ -23,14 +23,14 @@ describe('todo note component', () => {
     });
 
     it('should react to click on delete button', () => {
-        const wrapper = mount(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
+        const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         wrapper.setState({id:1})
         wrapper.find('#delete').simulate('click');
         expect(mockedDeleteFn.mock.calls.length).toBe(1);
         expect(mockedDeleteFn).toHaveBeenCalledWith(1)
     });
 
-    it('should react to click on update button', () => {
+    it('should react to click on update button and send request to update the todo to parent comp', () => {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         wrapper.setState({
             id: mockedTodo.id,
@@ -50,19 +50,7 @@ describe('todo note component', () => {
         expect(mockedUpdateFn).not.toHaveBeenCalled()
     });
 
-    it('should react to click on update button with correct parameter if the state has been changed', () => {
-        const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
-        wrapper.setState({
-            id: mockedTodo.id,
-            completed: mockedTodo.completed,
-            description: mockedTodo.description,
-            isDescriptionChanged: true
-        })
-        wrapper.find('#update').simulate('click');
-        expect(mockedUpdateFn).toHaveBeenCalledWith(mockedTodo)
-    });
-
-    it('should call handleCheckboxChange when checkbox is checked or unchecked and change state.completed ', function () {
+    it('should call handleCheckboxChange when checkbox is toggled and manipulate the state.completed properties ', function () {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         expect(wrapper.state().completed).toBeFalsy()
         expect(wrapper.state().isDescriptionChanged).toBeFalsy()
@@ -70,7 +58,7 @@ describe('todo note component', () => {
         expect(wrapper.state().completed).toBeTruthy()
     });
 
-    it('should call handleCheckboxChange when checkbox is checked or unchecked resulting in a call for handleClickUpdate', function () {
+    it('should call handleCheckboxChange when checkbox is toggled resulting in a call for handleClickUpdate', function () {
         const wrapper = shallow(<ToDoNote toDo={mockedTodo} onDelete={mockedDeleteFn} onUpdate={mockedUpdateFn}/>);
         const instance = wrapper.instance()
         jest.spyOn(instance, 'handleUpdateClick')
@@ -79,7 +67,7 @@ describe('todo note component', () => {
         wrapper.find('#isComplete').simulate('change')
         expect(wrapper.state().completed).toBeTruthy()
         expect(instance.handleUpdateClick).toHaveBeenCalled()
+        expect(wrapper.state().isDescriptionChanged).toBeFalsy()
+
     });
-
-
 })
